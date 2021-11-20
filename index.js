@@ -9,7 +9,7 @@ app.use(express.json()) // To parse the incoming requests with JSON payloads
 app.use(cors())
 app.use(users)
 
-const port = 3330
+const port = process.env.PORT || 3330
 
 app.get('/', (req,res) => {
     console.log('hello world')
